@@ -16,9 +16,11 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     database_url: str = Field(
         default="postgresql+psycopg://assistant:assistant@localhost:5432/assistant",
-        description="PostgreSQL connection URL; used in a later phase.",
+        description="PostgreSQL connection URL.",
     )
     redis_url: str = "redis://localhost:6379/0"
+    database_pool_size: int = 5
+    database_max_overflow: int = 10
     cors_origins: str = "http://localhost:3000"
 
     model_config = SettingsConfigDict(

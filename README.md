@@ -13,7 +13,7 @@ A modular enterprise knowledge assistant built around secure document ingestion,
 
 ## Phases
 
-Phase 1 established the repository structure. Phase 2 adds the runnable FastAPI backend foundation and a health check. Database services, authentication, document processing, and external AI credentials will be introduced in later reviewed phases.
+Phase 1 established the repository structure. Phase 2 added the runnable FastAPI foundation. Phase 3 adds local PostgreSQL/pgvector and Redis services, SQLAlchemy models, and Alembic migrations. Authentication, document processing, and external AI credentials will be introduced in later reviewed phases.
 
 ## Planned technology
 
