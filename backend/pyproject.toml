@@ -16,6 +16,12 @@ dependencies = [
     "psycopg[binary]>=3.2,<4.0",
     "pgvector>=0.3,<1.0",
     "redis>=5.2,<6.0",
+    "pypdf>=5.0,<6.0",
+    "python-docx>=1.1,<2.0",
+    "python-multipart>=0.0.9,<1.0",
+    "langgraph>=0.2,<1.0",
+    "google-genai>=1.0,<2.0",
+    "PyJWT>=2.9,<3.0",
 ]
 
 [project.optional-dependencies]
@@ -32,3 +38,6 @@ testpaths = ["tests"]
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+
+[tool.setuptools.packages.find]
+include = ["app*"]

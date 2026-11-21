@@ -12,10 +12,12 @@ venv/
 .coverage
 htmlcov/
 node_modules/
+.vite-cache/
 dist/
 build/
 .next/
 coverage/
 *.log
+backend/data/
 .DS_Store
 Thumbs.db

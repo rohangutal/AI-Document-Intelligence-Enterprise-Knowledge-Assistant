@@ -21,7 +21,16 @@ class Settings(BaseSettings):
     redis_url: str = "redis://localhost:6379/0"
     database_pool_size: int = 5
     database_max_overflow: int = 10
-    cors_origins: str = "http://localhost:3000"
+    cors_origins: str = "http://localhost:3000,http://localhost:5173,http://127.0.0.1:5173"
+    # Must be supplied through JWT_SECRET in deployed environments.
+    jwt_secret: str = ""
+    jwt_algorithm: str = "HS256"
+    access_token_expire_minutes: int = 60
+    gemini_api_key: str = ""
+    llm_model: str = "gemini-2.5-flash"
+    llm_enabled: bool = True
+    upload_dir: str = "./data/uploads"
+    max_upload_bytes: int = 25 * 1024 * 1024
 
     model_config = SettingsConfigDict(
         env_file=".env",

@@ -1,0 +1,40 @@
+{
+  "case_count": 3,
+  "passed_boolean_checks": 5,
+  "boolean_check_count": 5,
+  "pass_rate": 1.0,
+  "limitations": [
+    "The dataset is a deterministic smoke/evaluation baseline, not legal ground truth.",
+    "Faithfulness and answer relevance require human review or a separately validated judge.",
+    "Risk severity quality must be assessed against reviewed annotations before production claims."
+  ],
+  "results": [
+    {
+      "id": "termination-citation-001",
+      "task": "question",
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "mrr": 0.5,
+      "citation_correct": true,
+      "evidence_valid": true,
+      "evidence_valid_check": true
+    },
+    {
+      "id": "risk-detection-001",
+      "task": "risk",
+      "risk_precision": 1.0,
+      "risk_recall": 1.0,
+      "risk_f1": 1.0,
+      "expected_terms_present": true,
+      "evidence_valid": false,
+      "evidence_valid_check": true
+    },
+    {
+      "id": "obligation-extraction-001",
+      "task": "obligation",
+      "obligation_count": 2,
+      "expected_obligation_count": 2,
+      "count_match": true
+    }
+  ]
+}

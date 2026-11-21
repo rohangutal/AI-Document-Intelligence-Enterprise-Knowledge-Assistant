@@ -1,0 +1,46 @@
+[
+  {
+    "id": "termination-citation-001",
+    "task": "question",
+    "question": "What are the termination conditions?",
+    "document_text": "12.2 Termination. Either party may terminate this Agreement for cause upon thirty days prior written notice.",
+    "chunks": [
+      {
+        "chunk_id": "term-1",
+        "document_name": "Vendor_Agreement.pdf",
+        "content": "Either party may terminate this Agreement for cause upon thirty days prior written notice.",
+        "page_number": 8,
+        "section_number": "12.2",
+        "clause_type": "termination"
+      },
+      {
+        "chunk_id": "pay-1",
+        "document_name": "Vendor_Agreement.pdf",
+        "content": "Invoices are payable within thirty days.",
+        "page_number": 5,
+        "section_number": "7.1",
+        "clause_type": "payment"
+      }
+    ],
+    "expected_retrieved_chunk_ids": ["term-1"],
+    "expected_citation_terms": ["Vendor_Agreement.pdf", "Page 8", "12.2"]
+  },
+  {
+    "id": "risk-detection-001",
+    "task": "risk",
+    "question": "Identify potentially significant risks.",
+    "document_text": "The supplier has unlimited liability for all losses. The agreement automatically renews for one year unless notice is given.",
+    "chunks": [],
+    "expected_risk_severities": ["high"],
+    "expected_risk_terms": ["unlimited liability", "automatically renew"],
+    "expected_evidence_valid": false
+  },
+  {
+    "id": "obligation-extraction-001",
+    "task": "obligation",
+    "question": "What obligations are stated?",
+    "document_text": "The customer shall pay all undisputed invoices within thirty days. The supplier must provide monthly reports.",
+    "chunks": [],
+    "expected_obligation_count": 2
+  }
+]
